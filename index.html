@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎬 Short Video Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f4f4f4;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .video-card {
+      background-color: #121212;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 320px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .video-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌟 Short Video Gallery</h1>
+    <p>Click on any video to watch</p>
+  </header>
+
+  <div class="gallery">
+
+    <div class="video-card">
+      <video controls poster="thumbnail1.png">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">🌿 Nature Vibes</div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumbnail2.png">
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">🎨 Street Art</div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumbnail3.png">
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">🌆 City Lights</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
